@@ -1,0 +1,894 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMK Negeri 2 Kota Tidore Kepulauan - Sekolah Vokasi Unggulan</title>
+    <link rel="icon" type="image/svg+xml" href="assets/images/logo-smkn2.svg">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="assets/js/tailwind-config.js"></script>
+
+    <!-- Google Fonts: Plus Jakarta Sans & Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,600;1,700&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="bg-[#F8FAFC] text-slate-800 antialiased selection:bg-amber-500 selection:text-white overflow-x-hidden">
+
+    <!-- ========================================== -->
+    <!-- 1. NAVBAR & HERO SECTION                   -->
+    <!-- ========================================== -->
+    <div id="beranda" class="relative hero-bg text-white overflow-hidden">
+
+        <!-- Navigation Bar -->
+        <header class="relative z-30 max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 pt-6 pb-4">
+            <div class="flex items-center justify-between gap-6">
+
+                <!-- Brand Logo Left -->
+                <a href="#beranda" class="flex items-center gap-3.5 group">
+                    <!-- Shield Emblem SMK Negeri 2 Tidore -->
+                    <div class="w-11 h-12 flex-shrink-0 flex items-center justify-center drop-shadow-md transition-transform group-hover:scale-105">
+                        <img src="assets/images/logo-smkn2.svg" alt="Logo SMK Negeri 2 Kota Tidore Kepulauan" class="w-full h-full">
+                    </div>
+                    <!-- Vertical Divider Line -->
+                    <div class="h-9 w-[1.5px] bg-white/35"></div>
+                    <!-- School Name -->
+                    <div class="flex flex-col">
+                        <span class="font-heading font-bold text-base sm:text-lg leading-tight tracking-wide text-white">SMK Negeri 2</span>
+                        <span class="text-[11px] sm:text-xs text-slate-300 font-normal tracking-wide">Kota Tidore Kepulauan</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation Links + Right CTA -->
+                <div class="flex items-center gap-8 lg:gap-10">
+                    <nav class="hidden lg:flex items-center space-x-8 xl:space-x-9 text-sm font-medium">
+                        <a href="#beranda" class="relative py-1.5 text-white font-semibold after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-[2.5px] after:bg-[#F59E0B] after:rounded-full">
+                            Beranda
+                        </a>
+                        <a href="#tentang-kami" class="py-1.5 text-slate-200 hover:text-amber-400 transition-colors">
+                            Tentang Kami
+                        </a>
+                        <a href="#akademik" class="py-1.5 text-slate-200 hover:text-amber-400 transition-colors">
+                            Akademik
+                        </a>
+                        <a href="#berita" class="py-1.5 text-slate-200 hover:text-amber-400 transition-colors">
+                            Berita
+                        </a>
+                        <!-- Dropdown Informasi -->
+                        <div class="relative group">
+                            <button class="flex items-center gap-1.5 py-1.5 text-slate-200 hover:text-amber-400 transition-colors focus:outline-none">
+                                <span>Informasi</span>
+                                <i class="fa-solid fa-chevron-down text-[10px] transition-transform duration-200 group-hover:rotate-180"></i>
+                            </button>
+                            <div class="absolute left-0 mt-2 w-48 rounded-xl bg-white shadow-xl py-2 text-slate-700 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 border border-slate-100">
+                                <a href="#akademik" class="block px-4 py-2 text-xs font-medium hover:bg-amber-50 hover:text-amber-600">Program Keahlian</a>
+                                <a href="#berita" class="block px-4 py-2 text-xs font-medium hover:bg-amber-50 hover:text-amber-600">Agenda & Kegiatan</a>
+                                <a href="#kontak" class="block px-4 py-2 text-xs font-medium hover:bg-amber-50 hover:text-amber-600">Hubungi Sekolah</a>
+                            </div>
+                        </div>
+                    </nav>
+
+                    <!-- Right Action CTA Button (SPMB) & Mobile Menu Button -->
+                    <div class="flex items-center gap-3">
+                        <button onclick="openModal('Pendaftaran SPMB 2026/2027', 'Sistem Penerimaan Murid Baru (SPMB) SMK Negeri 2 Kota Tidore Kepulauan telah dibuka! Silakan siapkan berkas pendaftaran dan kunjungi kampus kami di Jl. Soasio, Kelurahan Tomalou, atau hubungi panitia melalui kontak resmi di bagian bawah halaman ini.')" class="bg-[#F59E0B] hover:bg-[#D97706] text-white font-semibold text-xs sm:text-sm px-5 py-2.5 rounded-lg shadow-md shadow-amber-500/20 transition-all transform hover:-translate-y-0.5 active:translate-y-0">
+                            SPMB
+                        </button>
+
+                        <button id="mobile-menu-btn" class="lg:hidden p-2 rounded-lg text-white hover:bg-white/10 focus:outline-none">
+                            <i class="fa-solid fa-bars text-xl"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mobile Dropdown Menu -->
+            <div id="mobile-menu" class="hidden lg:hidden mt-4 bg-[#071936]/95 backdrop-blur-md rounded-2xl p-4 border border-white/10 space-y-2">
+                <a href="#beranda" class="block px-4 py-2.5 rounded-lg bg-amber-500/20 text-amber-400 font-semibold text-sm">Beranda</a>
+                <a href="#tentang-kami" class="block px-4 py-2.5 rounded-lg text-slate-200 hover:bg-white/5 text-sm">Tentang Kami</a>
+                <a href="#akademik" class="block px-4 py-2.5 rounded-lg text-slate-200 hover:bg-white/5 text-sm">Akademik</a>
+                <a href="#berita" class="block px-4 py-2.5 rounded-lg text-slate-200 hover:bg-white/5 text-sm">Berita</a>
+                <a href="#kontak" class="block px-4 py-2.5 rounded-lg text-slate-200 hover:bg-white/5 text-sm">Informasi & Kontak</a>
+            </div>
+        </header>
+
+        <!-- Hero Main Content -->
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 pt-12 lg:pt-20 pb-28 lg:pb-48">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+
+                <!-- Left Column: Typography -->
+                <div class="lg:col-span-6 space-y-7 text-left relative z-20">
+                    <!-- Badge Pill -->
+                    <div class="inline-flex items-center px-5 py-2 rounded-full hero-pill">
+                        <span class="text-[#F59E0B] font-bold text-[11px] sm:text-xs tracking-wider uppercase">
+                            SEKOLAH VOKASI UNGGULAN
+                        </span>
+                    </div>
+
+                    <!-- Big Bold Headline -->
+                    <h1 class="font-heading font-bold text-5xl sm:text-6xl xl:text-[72px] leading-[1.22] tracking-tight text-white uppercase">
+                        SMK BISA<br>
+                        SMK HEBAT
+                    </h1>
+
+                    <!-- Subtitle Quote -->
+                    <p class="text-slate-200/90 text-sm sm:text-base md:text-[16px] font-normal max-w-xl leading-relaxed pt-1">
+                        “Mencetak generasi kompeten, berkarakter, dan siap menghadapi masa depan.”
+                    </p>
+                </div>
+
+                <!-- Right Spacer on Desktop (Photo container is anchored right-bottom of #beranda) -->
+                <div class="hidden lg:block lg:col-span-6"></div>
+            </div>
+
+            <!-- Mobile / Tablet Photo Composite (< lg) -->
+            <div class="lg:hidden relative flex justify-center -mb-28 pt-6 select-none pointer-events-none">
+                <div class="relative w-full max-w-[560px]">
+                    <img
+                        src="assets/images/hero/student-back.png"
+                        alt="Siswa SMK Negeri 2 Kota Tidore Kepulauan"
+                        class="w-[88%] ml-auto mb-0 object-contain drop-shadow-[0_18px_35px_rgba(0,0,0,0.45)] relative z-10"
+                    >
+                    <img
+                        src="assets/images/hero/students-front.png"
+                        alt="Siswi Berprestasi SMK Negeri 2 Kota Tidore Kepulauan"
+                        class="w-[94%] object-contain drop-shadow-[0_16px_30px_rgba(0,0,0,0.4)] absolute bottom-0 left-0 z-20"
+                    >
+                </div>
+            </div>
+        </div>
+
+        <!-- Desktop Composite Photo Cutout anchored flush right & bottom of hero -->
+        <div class="hidden lg:flex justify-end items-end absolute right-0 bottom-0 w-[58%] xl:w-[56%] max-w-[860px] z-10 select-none pointer-events-none">
+            <div class="relative w-full">
+                <!-- Back Layer: Male Student at Computer -->
+                <img
+                    src="assets/images/hero/student-back.png"
+                    alt="Siswa SMK Negeri 2 Kota Tidore Kepulauan"
+                    class="w-[88%] ml-auto mb-0 object-contain drop-shadow-[0_18px_35px_rgba(0,0,0,0.45)] relative z-10"
+                >
+
+                <!-- Front Layer: 3 Female Students Holding Certificates -->
+                <img
+                    src="assets/images/hero/students-front.png"
+                    alt="Siswi Berprestasi SMK Negeri 2 Kota Tidore Kepulauan"
+                    class="w-[94%] object-contain drop-shadow-[0_16px_30px_rgba(0,0,0,0.4)] absolute bottom-0 left-0 z-20"
+                >
+            </div>
+        </div>
+    </div>
+
+    <!-- ========================================== -->
+    <!-- FLOATING STATS BAR (OVERLAPPING HERO)      -->
+    <!-- ========================================== -->
+    <section class="relative z-30 max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 -mt-20 sm:-mt-24">
+        <div class="bg-white/85 backdrop-blur-[2px] rounded-[26px] stats-shadow border border-white/60 py-7 sm:py-9 px-6 sm:px-10">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-4 text-center">
+
+                <!-- Stat 1: 6 Pilihan Jurusan -->
+                <div class="flex flex-col items-center">
+                    <div class="w-12 h-12 rounded-xl bg-[#FDE68A]/60 border border-[#F59E0B]/40 flex items-center justify-center text-[#D97706] shadow-sm mb-3">
+                        <i class="fa-regular fa-building text-lg"></i>
+                    </div>
+                    <span class="font-heading font-bold text-3xl sm:text-4xl text-[#F59E0B] tracking-tight">6</span>
+                    <span class="text-xs sm:text-[13px] text-slate-400 font-medium mt-1">Pilihan Jurusan</span>
+                </div>
+
+                <!-- Stat 2: 70 Total Siswa Aktif -->
+                <div class="flex flex-col items-center">
+                    <div class="w-12 h-12 rounded-xl bg-[#FDE68A]/60 border border-[#F59E0B]/40 flex items-center justify-center text-[#D97706] shadow-sm mb-3">
+                        <i class="fa-solid fa-user-group text-base"></i>
+                    </div>
+                    <span class="font-heading font-bold text-3xl sm:text-4xl text-[#F59E0B] tracking-tight">70</span>
+                    <span class="text-xs sm:text-[13px] text-slate-400 font-medium mt-1">Total Siswa Aktif</span>
+                </div>
+
+                <!-- Stat 3: 146 Alumni -->
+                <div class="flex flex-col items-center">
+                    <div class="w-12 h-12 rounded-xl bg-[#FDE68A]/60 border border-[#F59E0B]/40 flex items-center justify-center text-[#D97706] shadow-sm mb-3">
+                        <i class="fa-solid fa-graduation-cap text-lg"></i>
+                    </div>
+                    <span class="font-heading font-bold text-3xl sm:text-4xl text-[#F59E0B] tracking-tight">146</span>
+                    <span class="text-xs sm:text-[13px] text-slate-400 font-medium mt-1">Alumni</span>
+                </div>
+
+                <!-- Stat 4: A Akreditas -->
+                <div class="flex flex-col items-center">
+                    <div class="w-12 h-12 rounded-xl bg-[#FDE68A]/60 border border-[#F59E0B]/40 flex items-center justify-center text-[#D97706] shadow-sm mb-3">
+                        <i class="fa-solid fa-check text-lg"></i>
+                    </div>
+                    <span class="font-heading font-bold text-3xl sm:text-4xl text-[#F59E0B] tracking-tight">A</span>
+                    <span class="text-xs sm:text-[13px] text-slate-400 font-medium mt-1">Akreditas</span>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- 2. SAMBUTAN HANGAT (PRINCIPAL WELCOME)     -->
+    <!-- ========================================== -->
+    <section id="tentang-kami" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 pt-16 sm:pt-24 pb-12">
+        <div class="bg-white rounded-[32px] warm-card-shadow-lg border border-amber-500/10 p-6 sm:p-10 lg:p-16">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+
+                <!-- Left Column: Tilted Layered Frame + Principal Portrait -->
+                <div class="lg:col-span-4 flex justify-center">
+                    <div class="relative w-64 sm:w-72 py-4">
+                        <!-- Outer Soft Blue Tilted Layer 1 -->
+                        <div class="absolute inset-0 bg-[#EBF5FF] rounded-[32px] transform -rotate-6 scale-105 shadow-sm"></div>
+                        <!-- Middle Soft Blue Tilted Layer 2 -->
+                        <div class="absolute inset-2 bg-[#D6E9FF] rounded-[28px] transform -rotate-3"></div>
+
+                        <!-- Main Upright Principal Card -->
+                        <div class="relative z-10 bg-white rounded-[24px] overflow-hidden shadow-lg border border-slate-100">
+                            <!-- Portrait Image Area -->
+                            <div class="h-64 sm:h-72 w-full bg-white pt-4 px-4 flex items-end justify-center overflow-hidden">
+                                <img
+                                    src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=600&q=80"
+                                    alt="M. Djafar, S.Pd., M.Pd - Kepala SMK Negeri 2 Tidore"
+                                    class="w-full h-full object-cover object-top rounded-t-2xl"
+                                    onerror="this.src='https://placehold.co/400x450/ffffff/0f172a?text=Kepala+Sekolah'"
+                                >
+                            </div>
+                            <!-- Dark Navy Nameplate Banner at Bottom -->
+                            <div class="bg-[#0B2545] py-4 px-3 text-center">
+                                <h3 class="text-white font-bold text-xs sm:text-[13px] tracking-wide">
+                                    M. Djafar, S.Pd.,M.Pd
+                                </h3>
+                                <div class="w-36 h-[1px] bg-amber-400/50 mx-auto my-1"></div>
+                                <p class="text-[#F59E0B] font-semibold text-[10px] sm:text-[11px] tracking-wider">
+                                    NIP. 197004121998021005
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column: Welcome Text Content -->
+                <div class="lg:col-span-8 space-y-4 text-left">
+                    <!-- Small Pill Badge -->
+                    <div class="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-[#FEF3C7] text-[#D97706] text-[10px] sm:text-[11px] font-bold uppercase tracking-wider">
+                        <span>•</span>
+                        <span>SAMBUTAN HANGAT</span>
+                    </div>
+
+                    <!-- Section Heading -->
+                    <h2 class="font-heading font-bold text-2xl sm:text-3xl lg:text-[32px] text-slate-900 leading-[1.3]">
+                        Membangun Generasi Kompeten, Berkarakter & Siap Menghadapi Masa Depan
+                    </h2>
+
+                    <!-- Greeting Speech Body -->
+                    <div class="space-y-3.5 text-slate-600 text-xs sm:text-[13.5px] leading-relaxed pt-1">
+                        <p class="font-bold italic text-slate-800">
+                            Assalamu’alaikum Warahmatullahi Wabarakatuh, Salam sejahtera bagi kita semua.”
+                        </p>
+
+                        <p>
+                            Selamat datang di website resmi SMK Negeri 2 Tidore. Kami berkomitmen menghadirkan pendidikan vokasi yang berkualitas untuk membentuk generasi yang terampil, berintegritas, dan berdaya saing, dengan tetap menjunjung tinggi nilai budaya dan kearifan lokal Tidore.
+                        </p>
+
+                        <p>
+                            Melalui pembelajaran berbasis kompetensi dan kolaborasi dengan dunia usaha serta dunia industri, kami berupaya mempersiapkan peserta didik menjadi generasi mandiri, inovatif, dan siap berkarya demi masa depan yang lebih baik.
+                        </p>
+
+                        <p class="font-medium text-slate-700">
+                            Mari moi ngone, jaga budaya, bangun masa depan!
+                        </p>
+
+                        <p class="font-medium text-slate-700">
+                            Salam hormat, Kepala SMK Negeri 2 Tidore.
+                        </p>
+
+                        <p class="font-bold italic text-slate-800">
+                            Wassalamu’alaikum warahmatullahi wabarakatuh.
+                        </p>
+                    </div>
+
+                    <!-- Orange Rounded Pill Button -->
+                    <div class="pt-3">
+                        <a href="#akademik" class="inline-flex items-center gap-3 bg-[#F59E0B] hover:bg-[#D97706] text-white font-semibold text-xs sm:text-sm px-7 py-3.5 rounded-full shadow-lg shadow-amber-500/25 transition-all transform hover:-translate-y-0.5">
+                            <span>Selengkapnya Tentang Kami</span>
+                            <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- 3. PILIHAN PROGRAM UNGGULAN (6 CARDS)      -->
+    <!-- ========================================== -->
+    <section id="akademik" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 py-16 sm:py-20">
+
+        <!-- Section Header Centered -->
+        <div class="text-center max-w-2xl mx-auto mb-12 sm:mb-14">
+            <div class="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-[#FEF3C7] text-[#D97706] text-[10px] sm:text-[11px] font-bold uppercase tracking-wider mb-3">
+                <span>•</span>
+                <span>PROGRAM KEAHLIAN</span>
+            </div>
+            <h2 class="font-heading font-bold text-2xl sm:text-3xl lg:text-[34px] text-slate-900">
+                Pilihan Program Unggulan
+            </h2>
+        </div>
+
+        <!-- 3x2 Grid of Program Cards (Exact Match to Screenshot 3) -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 lg:gap-8">
+
+            <!-- Program Card 1 -->
+            <div class="bg-white rounded-[22px] warm-card-shadow border border-amber-500/10 overflow-hidden flex flex-col transition-all duration-300 hover:-translate-y-1.5">
+                <div class="h-52 w-full overflow-hidden relative bg-slate-200">
+                    <img
+                        src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=700&q=80"
+                        alt="Teknik Instalai Tenaga Listrik"
+                        class="w-full h-full object-cover"
+                    >
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+                </div>
+                <div class="p-6 flex-1 flex flex-col justify-between">
+                    <div>
+                        <h3 class="font-heading font-bold text-base sm:text-[17px] text-slate-900 mb-2.5">
+                            Teknik Instalai Tenaga Listrik
+                        </h3>
+                        <p class="text-slate-400 text-xs leading-relaxed line-clamp-3-custom">
+                            Teknik Instalasi Tenaga Listrik (TITL) merupakan program keahlian yang mempelajari pemasangan, pengoperasian, dan pemeliharaan instalasi listrik. Siswa dibekali ...
+                        </p>
+                    </div>
+                    <div class="pt-6">
+                        <button onclick="openModal('Teknik Instalasi Tenaga Listrik (TITL)', 'Program Keahlian Teknik Instalasi Tenaga Listrik (TITL) SMK Negeri 2 Kota Tidore Kepulauan membekali peserta didik dengan keterampilan instalasi penerangan, tenaga listrik industri, panel kontrol, serta perawatan peralatan kelistrikan sesuai standar K3 dan kebutuhan dunia industri.')" class="inline-flex items-center gap-2 text-[#F59E0B] hover:text-[#D97706] font-semibold text-xs group">
+                            <span>Detail Jurusan</span>
+                            <i class="fa-solid fa-chevron-right text-[10px] transition-transform group-hover:translate-x-1"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Program Card 2 -->
+            <div class="bg-white rounded-[22px] warm-card-shadow border border-amber-500/10 overflow-hidden flex flex-col transition-all duration-300 hover:-translate-y-1.5">
+                <div class="h-52 w-full overflow-hidden relative bg-slate-200">
+                    <img
+                        src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=700&q=80"
+                        alt="Teknik Instalai Tenaga Listrik"
+                        class="w-full h-full object-cover"
+                    >
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+                </div>
+                <div class="p-6 flex-1 flex flex-col justify-between">
+                    <div>
+                        <h3 class="font-heading font-bold text-base sm:text-[17px] text-slate-900 mb-2.5">
+                            Teknik Instalai Tenaga Listrik
+                        </h3>
+                        <p class="text-slate-400 text-xs leading-relaxed line-clamp-3-custom">
+                            Teknik Instalasi Tenaga Listrik (TITL) merupakan program keahlian yang mempelajari pemasangan, pengoperasian, dan pemeliharaan instalasi listrik. Siswa dibekali ...
+                        </p>
+                    </div>
+                    <div class="pt-6">
+                        <button onclick="openModal('Teknik Instalasi Tenaga Listrik (TITL)', 'Program Keahlian Teknik Instalasi Tenaga Listrik (TITL) SMK Negeri 2 Kota Tidore Kepulauan membekali peserta didik dengan keterampilan instalasi penerangan, tenaga listrik industri, panel kontrol, serta perawatan peralatan kelistrikan sesuai standar K3 dan kebutuhan dunia industri.')" class="inline-flex items-center gap-2 text-[#F59E0B] hover:text-[#D97706] font-semibold text-xs group">
+                            <span>Detail Jurusan</span>
+                            <i class="fa-solid fa-chevron-right text-[10px] transition-transform group-hover:translate-x-1"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Program Card 3 -->
+            <div class="bg-white rounded-[22px] warm-card-shadow border border-amber-500/10 overflow-hidden flex flex-col transition-all duration-300 hover:-translate-y-1.5">
+                <div class="h-52 w-full overflow-hidden relative bg-slate-200">
+                    <img
+                        src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=700&q=80"
+                        alt="Teknik Instalai Tenaga Listrik"
+                        class="w-full h-full object-cover"
+                    >
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+                </div>
+                <div class="p-6 flex-1 flex flex-col justify-between">
+                    <div>
+                        <h3 class="font-heading font-bold text-base sm:text-[17px] text-slate-900 mb-2.5">
+                            Teknik Instalai Tenaga Listrik
+                        </h3>
+                        <p class="text-slate-400 text-xs leading-relaxed line-clamp-3-custom">
+                            Teknik Instalasi Tenaga Listrik (TITL) merupakan program keahlian yang mempelajari pemasangan, pengoperasian, dan pemeliharaan instalasi listrik. Siswa dibekali ...
+                        </p>
+                    </div>
+                    <div class="pt-6">
+                        <button onclick="openModal('Teknik Instalasi Tenaga Listrik (TITL)', 'Program Keahlian Teknik Instalasi Tenaga Listrik (TITL) SMK Negeri 2 Kota Tidore Kepulauan membekali peserta didik dengan keterampilan instalasi penerangan, tenaga listrik industri, panel kontrol, serta perawatan peralatan kelistrikan sesuai standar K3 dan kebutuhan dunia industri.')" class="inline-flex items-center gap-2 text-[#F59E0B] hover:text-[#D97706] font-semibold text-xs group">
+                            <span>Detail Jurusan</span>
+                            <i class="fa-solid fa-chevron-right text-[10px] transition-transform group-hover:translate-x-1"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Program Card 4 -->
+            <div class="bg-white rounded-[22px] warm-card-shadow border border-amber-500/10 overflow-hidden flex flex-col transition-all duration-300 hover:-translate-y-1.5">
+                <div class="h-52 w-full overflow-hidden relative bg-slate-200">
+                    <img
+                        src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=700&q=80"
+                        alt="Teknik Instalai Tenaga Listrik"
+                        class="w-full h-full object-cover"
+                    >
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+                </div>
+                <div class="p-6 flex-1 flex flex-col justify-between">
+                    <div>
+                        <h3 class="font-heading font-bold text-base sm:text-[17px] text-slate-900 mb-2.5">
+                            Teknik Instalai Tenaga Listrik
+                        </h3>
+                        <p class="text-slate-400 text-xs leading-relaxed line-clamp-3-custom">
+                            Teknik Instalasi Tenaga Listrik (TITL) merupakan program keahlian yang mempelajari pemasangan, pengoperasian, dan pemeliharaan instalasi listrik. Siswa dibekali ...
+                        </p>
+                    </div>
+                    <div class="pt-6">
+                        <button onclick="openModal('Teknik Instalasi Tenaga Listrik (TITL)', 'Program Keahlian Teknik Instalasi Tenaga Listrik (TITL) SMK Negeri 2 Kota Tidore Kepulauan membekali peserta didik dengan keterampilan instalasi penerangan, tenaga listrik industri, panel kontrol, serta perawatan peralatan kelistrikan sesuai standar K3 dan kebutuhan dunia industri.')" class="inline-flex items-center gap-2 text-[#F59E0B] hover:text-[#D97706] font-semibold text-xs group">
+                            <span>Detail Jurusan</span>
+                            <i class="fa-solid fa-chevron-right text-[10px] transition-transform group-hover:translate-x-1"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Program Card 5 -->
+            <div class="bg-white rounded-[22px] warm-card-shadow border border-amber-500/10 overflow-hidden flex flex-col transition-all duration-300 hover:-translate-y-1.5">
+                <div class="h-52 w-full overflow-hidden relative bg-slate-200">
+                    <img
+                        src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=700&q=80"
+                        alt="Teknik Instalai Tenaga Listrik"
+                        class="w-full h-full object-cover"
+                    >
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+                </div>
+                <div class="p-6 flex-1 flex flex-col justify-between">
+                    <div>
+                        <h3 class="font-heading font-bold text-base sm:text-[17px] text-slate-900 mb-2.5">
+                            Teknik Instalai Tenaga Listrik
+                        </h3>
+                        <p class="text-slate-400 text-xs leading-relaxed line-clamp-3-custom">
+                            Teknik Instalasi Tenaga Listrik (TITL) merupakan program keahlian yang mempelajari pemasangan, pengoperasian, dan pemeliharaan instalasi listrik. Siswa dibekali ...
+                        </p>
+                    </div>
+                    <div class="pt-6">
+                        <button onclick="openModal('Teknik Instalasi Tenaga Listrik (TITL)', 'Program Keahlian Teknik Instalasi Tenaga Listrik (TITL) SMK Negeri 2 Kota Tidore Kepulauan membekali peserta didik dengan keterampilan instalasi penerangan, tenaga listrik industri, panel kontrol, serta perawatan peralatan kelistrikan sesuai standar K3 dan kebutuhan dunia industri.')" class="inline-flex items-center gap-2 text-[#F59E0B] hover:text-[#D97706] font-semibold text-xs group">
+                            <span>Detail Jurusan</span>
+                            <i class="fa-solid fa-chevron-right text-[10px] transition-transform group-hover:translate-x-1"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Program Card 6 -->
+            <div class="bg-white rounded-[22px] warm-card-shadow border border-amber-500/10 overflow-hidden flex flex-col transition-all duration-300 hover:-translate-y-1.5">
+                <div class="h-52 w-full overflow-hidden relative bg-slate-200">
+                    <img
+                        src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=700&q=80"
+                        alt="Teknik Instalai Tenaga Listrik"
+                        class="w-full h-full object-cover"
+                    >
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+                </div>
+                <div class="p-6 flex-1 flex flex-col justify-between">
+                    <div>
+                        <h3 class="font-heading font-bold text-base sm:text-[17px] text-slate-900 mb-2.5">
+                            Teknik Instalai Tenaga Listrik
+                        </h3>
+                        <p class="text-slate-400 text-xs leading-relaxed line-clamp-3-custom">
+                            Teknik Instalasi Tenaga Listrik (TITL) merupakan program keahlian yang mempelajari pemasangan, pengoperasian, dan pemeliharaan instalasi listrik. Siswa dibekali ...
+                        </p>
+                    </div>
+                    <div class="pt-6">
+                        <button onclick="openModal('Teknik Instalasi Tenaga Listrik (TITL)', 'Program Keahlian Teknik Instalasi Tenaga Listrik (TITL) SMK Negeri 2 Kota Tidore Kepulauan membekali peserta didik dengan keterampilan instalasi penerangan, tenaga listrik industri, panel kontrol, serta perawatan peralatan kelistrikan sesuai standar K3 dan kebutuhan dunia industri.')" class="inline-flex items-center gap-2 text-[#F59E0B] hover:text-[#D97706] font-semibold text-xs group">
+                            <span>Detail Jurusan</span>
+                            <i class="fa-solid fa-chevron-right text-[10px] transition-transform group-hover:translate-x-1"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- 4. KABAR TERBARU SEKOLAH (6 NEWS CARDS)    -->
+    <!-- ========================================== -->
+    <section id="berita" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 pt-8 pb-24">
+
+        <!-- Section Header Centered -->
+        <div class="text-center max-w-2xl mx-auto mb-12 sm:mb-14">
+            <div class="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-[#FEF3C7] text-[#D97706] text-[10px] sm:text-[11px] font-bold uppercase tracking-wider mb-3">
+                <span>•</span>
+                <span>BERITA & KABAR</span>
+            </div>
+            <h2 class="font-heading font-bold text-2xl sm:text-3xl lg:text-[34px] text-slate-900">
+                Kabar Terbaru Sekolah
+            </h2>
+        </div>
+
+        <!-- 3x2 Grid of News Cards (Exact Match to Screenshot 4) -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 lg:gap-8">
+
+            <!-- News Card 1 -->
+            <article class="bg-white rounded-[22px] warm-card-shadow border border-amber-500/10 overflow-hidden flex flex-col transition-all duration-300 hover:-translate-y-1.5">
+                <div class="h-52 w-full overflow-hidden bg-slate-100">
+                    <img
+                        src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=700&q=80"
+                        alt="Bimtek Hari Kelima"
+                        class="w-full h-full object-cover"
+                    >
+                </div>
+                <div class="p-6 flex-1 flex flex-col justify-between">
+                    <div>
+                        <!-- Meta Badge & Date -->
+                        <div class="flex items-center justify-between gap-2 mb-3.5">
+                            <span class="px-3 py-1 rounded-full bg-[#FEF3C7] text-[#D97706] font-bold text-[8.5px] uppercase tracking-wider">
+                                SURVEY PELAYANAN PUBLIK
+                            </span>
+                            <span class="text-[11px] text-slate-400">3 bulan yang lalu</span>
+                        </div>
+                        <h3 class="font-heading font-bold text-[15px] sm:text-base text-slate-900 leading-snug mb-3">
+                            Bimtek Hari Kelima<br>
+                            Tema: Implementasi Digitalisasi Pembelajaran 2
+                        </h3>
+                        <p class="text-slate-400 text-[11.5px] leading-relaxed">
+                            SMK Negeri 2 Kota Tidore Kepulauan turut berpartisipasi dalam kegiatan Bimbingan Teknis hari kelima dengan mempelajari pembuatan Media Pembelajaran Interaktif (MPI) berbasis Kecerdasan Buatan (AI) melalui berbagai aplikasi digital . . .
+                        </p>
+                    </div>
+                    <div class="pt-5">
+                        <button onclick="openModal('Bimtek Hari Kelima: Implementasi Digitalisasi Pembelajaran 2', 'SMK Negeri 2 Kota Tidore Kepulauan turut berpartisipasi aktif dalam kegiatan Bimbingan Teknis hari kelima dengan mempelajari pembuatan Media Pembelajaran Interaktif (MPI) berbasis Kecerdasan Buatan (AI) melalui berbagai aplikasi digital guna meningkatkan kualitas pengajaran guru di kelas.')" class="inline-flex items-center gap-2 text-[#F59E0B] hover:text-[#D97706] font-semibold text-xs group">
+                            <span>Detail berita</span>
+                            <i class="fa-solid fa-chevron-right text-[10px] transition-transform group-hover:translate-x-1"></i>
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            <!-- News Card 2 (With active blue highlight border as shown in Figma screenshot) -->
+            <article class="bg-white rounded-[22px] warm-card-shadow ring-2 ring-[#0284C7] overflow-hidden flex flex-col transition-all duration-300 hover:-translate-y-1.5">
+                <div class="h-52 w-full overflow-hidden bg-slate-100 relative">
+                    <img
+                        src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=700&q=80"
+                        alt="Pelepasan Peserta Kejurnas Dan Jambore Nasional"
+                        class="w-full h-full object-cover"
+                    >
+                    <div class="absolute bottom-0 inset-x-0 h-3 bg-gradient-to-r from-blue-700 via-amber-400 to-blue-700"></div>
+                </div>
+                <div class="p-6 flex-1 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between gap-2 mb-3.5">
+                            <span class="px-3 py-1 rounded-full bg-[#FEF3C7] text-[#D97706] font-bold text-[8.5px] uppercase tracking-wider">
+                                SURVEY PELAYANAN PUBLIK
+                            </span>
+                            <span class="text-[11px] text-slate-400">3 bulan yang lalu</span>
+                        </div>
+                        <h3 class="font-heading font-bold text-[15px] sm:text-base text-slate-900 leading-snug mb-3">
+                            Pelepasan Peserta Kejurnas Dan Jambore Nasional
+                        </h3>
+                        <p class="text-slate-400 text-[11.5px] leading-relaxed">
+                            Setelah menempuh perjalanan dan membawa semangat juang tinggi ke Bumi Perkemahan Cibubur, Jakarta, kini kontingen SMK Negeri 2 Kota Tidore Kepulauan kembali dengan membawa pengalaman, cerita, dan kebanggaan tersendiri . . .
+                        </p>
+                    </div>
+                    <div class="pt-5">
+                        <button onclick="openModal('Pelepasan Peserta Kejurnas Dan Jambore Nasional', 'Setelah menempuh perjalanan dan membawa semangat juang tinggi ke Bumi Perkemahan Cibubur, Jakarta, kini kontingen SMK Negeri 2 Kota Tidore Kepulauan kembali dengan membawa pengalaman, cerita, dan kebanggaan tersendiri bagi seluruh keluarga besar sekolah.')" class="inline-flex items-center gap-2 text-[#F59E0B] hover:text-[#D97706] font-semibold text-xs group">
+                            <span>Detail berita</span>
+                            <i class="fa-solid fa-chevron-right text-[10px] transition-transform group-hover:translate-x-1"></i>
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            <!-- News Card 3 -->
+            <article class="bg-white rounded-[22px] warm-card-shadow border border-amber-500/10 overflow-hidden flex flex-col transition-all duration-300 hover:-translate-y-1.5">
+                <div class="h-52 w-full overflow-hidden bg-slate-100 relative">
+                    <img
+                        src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?auto=format&fit=crop&w=700&q=80"
+                        alt="Semangat Sumpah Pemuda"
+                        class="w-full h-full object-cover"
+                    >
+                    <div class="absolute top-2 inset-x-6 bg-red-600/90 text-white text-[9px] font-bold uppercase tracking-widest py-1 px-3 rounded-full text-center shadow">
+                        HARI SUMPAH PEMUDA • 28 OKTOBER
+                    </div>
+                </div>
+                <div class="p-6 flex-1 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between gap-2 mb-3.5">
+                            <span class="px-3 py-1 rounded-full bg-[#FEF3C7] text-[#D97706] font-bold text-[8.5px] uppercase tracking-wider">
+                                SURVEY PELAYANAN PUBLIK
+                            </span>
+                            <span class="text-[11px] text-slate-400">3 bulan yang lalu</span>
+                        </div>
+                        <h3 class="font-heading font-bold text-[15px] sm:text-base text-slate-900 leading-snug mb-3">
+                            Semangat Sumpah Pemuda, semangat berkarya!
+                        </h3>
+                        <div class="text-slate-400 text-[11.5px] leading-relaxed space-y-2">
+                            <p>
+                                SMK Negeri 2 Kota Tidore Kepulauan terus mendukung pengembangan bakat, minat, dan kreativitas peserta didik melalui berbagai kegiatan ekstrakurikuler.
+                            </p>
+                            <p>
+                                Dalam pentas seni menyemarakkan Hari Sumpah Pemuda 28 Oktober yang diselenggarakan oleh SMA Negeri 2 Tidore Kepulauan, siswa-siswi SMK Negeri 2 turut berpartisipasi dalam lomba tari . . .
+                            </p>
+                        </div>
+                    </div>
+                    <div class="pt-5">
+                        <button onclick="openModal('Semangat Sumpah Pemuda, semangat berkarya!', 'SMK Negeri 2 Kota Tidore Kepulauan terus mendukung pengembangan bakat, minat, dan kreativitas peserta didik melalui berbagai kegiatan ekstrakurikuler. Dalam pentas seni menyemarakkan Hari Sumpah Pemuda 28 Oktober, siswa-siswi SMK Negeri 2 turut berpartisipasi menampilkan tarian daerah tradisional Tidore.')" class="inline-flex items-center gap-2 text-[#F59E0B] hover:text-[#D97706] font-semibold text-xs group">
+                            <span>Detail berita</span>
+                            <i class="fa-solid fa-chevron-right text-[10px] transition-transform group-hover:translate-x-1"></i>
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            <!-- News Card 4 -->
+            <article class="bg-white rounded-[22px] warm-card-shadow border border-amber-500/10 overflow-hidden flex flex-col transition-all duration-300 hover:-translate-y-1.5">
+                <div class="h-52 w-full overflow-hidden bg-blue-900 relative">
+                    <img
+                        src="https://images.unsplash.com/photo-1530549387789-4c1017266635?auto=format&fit=crop&w=700&q=80"
+                        alt="Open Water Swimming Series II"
+                        class="w-full h-full object-cover"
+                    >
+                    <div class="absolute inset-0 bg-gradient-to-t from-blue-950/70 via-transparent to-transparent"></div>
+                    <div class="absolute bottom-3 right-3 bg-amber-400 text-navy-950 font-extrabold text-[9px] px-2.5 py-1 rounded shadow">
+                        PELAJAR PUTRA • LINTASAN 250 M
+                    </div>
+                </div>
+                <div class="p-6 flex-1 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between gap-2 mb-3.5">
+                            <span class="px-3 py-1 rounded-full bg-[#FEF3C7] text-[#D97706] font-bold text-[8.5px] uppercase tracking-wider">
+                                SURVEY PELAYANAN PUBLIK
+                            </span>
+                            <span class="text-[11px] text-slate-400">3 bulan yang lalu</span>
+                        </div>
+                        <h3 class="font-heading font-bold text-[15px] sm:text-base text-slate-900 leading-snug mb-3">
+                            Minggu bukan libur, tapi waktunya berjuang!
+                        </h3>
+                        <div class="text-slate-400 text-[11.5px] leading-relaxed space-y-2">
+                            <p>
+                                SMKN 2 Kota Tidore Kepulauan mengirimkan 6 siswa terbaik, terdiri dari 5 putra dan 1 putri, untuk berlaga dalam Kejuaraan Open Water Swimming Series II di Pantai Falajawa, Kota Ternate.
+                            </p>
+                            <p>
+                                Dengan semangat dan perjuangan di lintasan 250 meter, siswa kami berhasil menorehkan prestasi dengan menempati urutan ke-7 dan ke-9 dari 76 peserta kategori Pelajar Putra . . .
+                            </p>
+                        </div>
+                    </div>
+                    <div class="pt-5">
+                        <button onclick="openModal('Minggu bukan libur, tapi waktunya berjuang!', 'SMKN 2 Kota Tidore Kepulauan mengirimkan 6 siswa terbaik, terdiri dari 5 putra dan 1 putri, untuk berlaga dalam Kejuaraan Open Water Swimming Series II di Pantai Falajawa, Kota Ternate. Siswa kami berhasil menempati urutan ke-7 dan ke-9 dari 76 peserta kategori Pelajar Putra.')" class="inline-flex items-center gap-2 text-[#F59E0B] hover:text-[#D97706] font-semibold text-xs group">
+                            <span>Detail berita</span>
+                            <i class="fa-solid fa-chevron-right text-[10px] transition-transform group-hover:translate-x-1"></i>
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            <!-- News Card 5 -->
+            <article class="bg-white rounded-[22px] warm-card-shadow border border-amber-500/10 overflow-hidden flex flex-col transition-all duration-300 hover:-translate-y-1.5">
+                <div class="h-52 w-full overflow-hidden bg-slate-100">
+                    <img
+                        src="https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=700&q=80"
+                        alt="Penyambutan Murid PKL SMK Negeri 2 Tidore"
+                        class="w-full h-full object-cover"
+                    >
+                </div>
+                <div class="p-6 flex-1 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between gap-2 mb-3.5">
+                            <span class="px-3 py-1 rounded-full bg-[#FEF3C7] text-[#D97706] font-bold text-[8.5px] uppercase tracking-wider">
+                                SURVEY PELAYANAN PUBLIK
+                            </span>
+                            <span class="text-[11px] text-slate-400">3 bulan yang lalu</span>
+                        </div>
+                        <h3 class="font-heading font-bold text-[15px] sm:text-base text-slate-900 leading-snug mb-3">
+                            Momen penuh makna bagi keluarga besar SMK Negeri 2 Kota Tidore Kepulauan.
+                        </h3>
+                        <p class="text-slate-400 text-[11.5px] leading-relaxed">
+                            Kita menyambut kembali murid Kelas XII yang telah menyelesaikan Praktik Kerja Lapangan (PKL), sekaligus menyambut kepulangan murid dan guru pendamping yang telah mengikuti Kejuaraan Nasional dan Jambore Nasional Pencak Silat di Cibubur, Jakarta . . .
+                        </p>
+                    </div>
+                    <div class="pt-5">
+                        <button onclick="openModal('Momen Penuh Makna Keluarga Besar SMKN 2 Tidore Kepulauan', 'Kita menyambut kembali murid Kelas XII yang telah menyelesaikan Praktik Kerja Lapangan (PKL), sekaligus menyambut kepulangan murid dan guru pendamping yang telah mengikuti Kejuaraan Nasional dan Jambore Nasional Pencak Silat di Cibubur, Jakarta.')" class="inline-flex items-center gap-2 text-[#F59E0B] hover:text-[#D97706] font-semibold text-xs group">
+                            <span>Detail berita</span>
+                            <i class="fa-solid fa-chevron-right text-[10px] transition-transform group-hover:translate-x-1"></i>
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            <!-- News Card 6 -->
+            <article class="bg-white rounded-[22px] warm-card-shadow border border-amber-500/10 overflow-hidden flex flex-col transition-all duration-300 hover:-translate-y-1.5">
+                <div class="h-52 w-full overflow-hidden bg-gradient-to-br from-red-700 via-red-600 to-amber-600 relative p-5 flex flex-col justify-between text-white">
+                    <div class="z-10">
+                        <span class="text-[10px] font-extrabold tracking-widest uppercase bg-white/20 px-2.5 py-0.5 rounded">28 OKTOBER</span>
+                        <h4 class="font-heading font-extrabold text-xl leading-tight mt-2 drop-shadow">
+                            SELAMAT HARI<br>SUMPAH PEMUDA
+                        </h4>
+                    </div>
+                    <p class="z-10 text-[10px] text-red-100 italic max-w-[70%]">
+                        "Pemuda berani berinovasi, terampil berkarya, dan siap membangun masa depan bangsa"
+                    </p>
+                    <img
+                        src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80"
+                        alt="Sumpah Pemuda Banner"
+                        class="absolute right-2 bottom-0 w-28 h-40 object-cover object-top rounded-t-xl border-2 border-white/40 shadow-lg"
+                    >
+                </div>
+                <div class="p-6 flex-1 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between gap-2 mb-3.5">
+                            <span class="px-3 py-1 rounded-full bg-[#FEF3C7] text-[#D97706] font-bold text-[8.5px] uppercase tracking-wider">
+                                SURVEY PELAYANAN PUBLIK
+                            </span>
+                            <span class="text-[11px] text-slate-400">3 bulan yang lalu</span>
+                        </div>
+                        <h3 class="font-heading font-bold text-[15px] sm:text-base text-slate-900 leading-snug mb-3">
+                            Selamat Hari Sumpah Pemuda, 28 Oktober 2026!
+                        </h3>
+                        <div class="text-slate-400 text-[11.5px] leading-relaxed space-y-1.5">
+                            <p>Patriotik, Gigih, Berempati: Pemuda untuk Indonesia.</p>
+                            <p>
+                                SMKN 2 Kota Tidore Kepulauan terus berkomitmen mencetak generasi muda yang kompeten, kreatif, dan inovatif melalui teknologi dan rekayasa, siap berkarya untuk kemajuan bangsa.
+                            </p>
+                            <p>Bersama pemuda, kita bangun Indonesia yang lebih maju! . . .</p>
+                        </div>
+                    </div>
+                    <div class="pt-5">
+                        <button onclick="openModal('Selamat Hari Sumpah Pemuda, 28 Oktober 2026!', 'Patriotik, Gigih, Berempati: Pemuda untuk Indonesia. SMKN 2 Kota Tidore Kepulauan terus berkomitmen mencetak generasi muda yang kompeten, kreatif, dan inovatif melalui teknologi dan rekayasa, siap berkarya untuk kemajuan bangsa.')" class="inline-flex items-center gap-2 text-[#F59E0B] hover:text-[#D97706] font-semibold text-xs group">
+                            <span>Detail berita</span>
+                            <i class="fa-solid fa-chevron-right text-[10px] transition-transform group-hover:translate-x-1"></i>
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- 5. FOOTER SECTION (EXACT SCREENSHOT 5)     -->
+    <!-- ========================================== -->
+    <footer id="kontak" class="bg-[#0B1526] text-slate-300 border-t-[3px] border-[#0284C7]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 pt-16 pb-12">
+
+            <!-- 4-Column Footer Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-8 pb-14">
+
+                <!-- Column 1: Logo & School Description (4 cols) -->
+                <div class="lg:col-span-4 space-y-5 pr-0 lg:pr-6">
+                    <div class="flex items-center gap-3.5">
+                        <!-- Shield Emblem -->
+                        <div class="w-11 h-12 flex-shrink-0 flex items-center justify-center">
+                            <img src="assets/images/logo-smkn2.svg" alt="Logo SMK Negeri 2 Kota Tidore Kepulauan" class="w-full h-full">
+                        </div>
+                        <div class="h-9 w-[1.5px] bg-white/35"></div>
+                        <div class="flex flex-col">
+                            <span class="font-heading font-bold text-base sm:text-lg text-white leading-tight">SMK Negeri 2</span>
+                            <span class="text-xs text-slate-300">Kota Tidore Kepuluan</span>
+                        </div>
+                    </div>
+
+                    <p class="text-xs sm:text-[13px] text-slate-400 leading-relaxed">
+                        Website Resmi SMK Negeri 2 ta Tidore Kepulauan - Menghasilkan Lulusan yang Kompeten, Berkarakter, dan siap Kerja.
+                    </p>
+                </div>
+
+                <!-- Column 2: TAUTAN CEPAT (2.5 cols) -->
+                <div class="lg:col-span-2 space-y-4">
+                    <h4 class="font-heading font-bold text-white text-sm sm:text-base tracking-wider uppercase">
+                        TAUTAN CEPAT
+                    </h4>
+                    <ul class="space-y-2.5 text-xs sm:text-[13px] text-slate-400">
+                        <li>
+                            <a href="#beranda" class="hover:text-[#F59E0B] transition-colors">Beranda</a>
+                        </li>
+                        <li>
+                            <a href="#tentang-kami" class="hover:text-[#F59E0B] transition-colors">Profile Sekolah</a>
+                        </li>
+                        <li>
+                            <a href="#akademik" class="hover:text-[#F59E0B] transition-colors">Akademik & Jurusan</a>
+                        </li>
+                        <li>
+                            <a href="#berita" class="hover:text-[#F59E0B] transition-colors">Galeri</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: KONTAK (3.5 cols) -->
+                <div class="lg:col-span-4 space-y-4">
+                    <h4 class="font-heading font-bold text-white text-sm sm:text-base tracking-wider uppercase">
+                        KONTAK
+                    </h4>
+                    <ul class="space-y-3.5 text-xs sm:text-[13px] text-slate-400">
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-location-dot text-[#F59E0B] text-base mt-0.5 w-4 text-center flex-shrink-0"></i>
+                            <span class="leading-relaxed">
+                                Jl. Soasio, Kelurahan Tomalou, Kecamatan Tidore Selatan, Kota Tidore kepulauan, Provinsi Maluku Utara (Kode Pos: 97851/98751).
+                            </span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fa-regular fa-envelope text-[#F59E0B] text-base w-4 text-center flex-shrink-0"></i>
+                            <a href="mailto:smkn2tikep@yahoo.coom" class="hover:text-[#F59E0B] transition-colors">
+                                smkn2tikep@yahoo.coom
+                            </a>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-phone text-[#F59E0B] text-base w-4 text-center flex-shrink-0"></i>
+                            <a href="tel:082290826304" class="hover:text-[#F59E0B] transition-colors">
+                                0822-9082-6304
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: MEDIA SOSIAL (2 cols) -->
+                <div class="lg:col-span-2 space-y-4">
+                    <h4 class="font-heading font-bold text-white text-sm sm:text-base tracking-wider uppercase">
+                        MEDIA SOSIAL
+                    </h4>
+                    <div class="flex items-center gap-2.5">
+                        <!-- Facebook -->
+                        <a href="#kontak" aria-label="Facebook" class="w-11 h-11 rounded-xl bg-[#1E293B]/90 border border-slate-700/80 flex items-center justify-center text-[#F59E0B] hover:bg-[#F59E0B] hover:text-navy-950 transition-all">
+                            <i class="fa-brands fa-facebook text-lg"></i>
+                        </a>
+                        <!-- Instagram -->
+                        <a href="#kontak" aria-label="Instagram" class="w-11 h-11 rounded-xl bg-[#1E293B]/90 border border-slate-700/80 flex items-center justify-center text-[#F59E0B] hover:bg-[#F59E0B] hover:text-navy-950 transition-all">
+                            <i class="fa-brands fa-instagram text-lg"></i>
+                        </a>
+                        <!-- YouTube -->
+                        <a href="#kontak" aria-label="YouTube" class="w-11 h-11 rounded-xl bg-[#1E293B]/90 border border-slate-700/80 flex items-center justify-center text-[#F59E0B] hover:bg-[#F59E0B] hover:text-navy-950 transition-all">
+                            <i class="fa-brands fa-youtube text-lg"></i>
+                        </a>
+                        <!-- X / Twitter -->
+                        <a href="#kontak" aria-label="X Twitter" class="w-11 h-11 rounded-xl bg-[#1E293B]/90 border border-slate-700/80 flex items-center justify-center text-[#F59E0B] hover:bg-[#F59E0B] hover:text-navy-950 transition-all">
+                            <i class="fa-brands fa-x-twitter text-lg"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Horizontal Divider Line -->
+            <div class="border-t border-slate-700/80 pt-7 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400">
+                <p>
+                    2026 SMK NEGERI 2 Kota tidore Kepulauan. Hak Cipta Dilindungi.
+                </p>
+                <p>
+                    <span class="text-slate-500">Dikembangkan Oleh</span>
+                    <span class="text-white font-semibold ml-1">Kaleee Studio</span>
+                </p>
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- ========================================== -->
+    <!-- INTERACTIVE DETAIL MODAL                   -->
+    <!-- ========================================== -->
+    <div id="detail-modal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/60 backdrop-blur-sm p-4">
+        <div class="bg-white rounded-3xl max-w-lg w-full p-6 sm:p-8 shadow-2xl border border-slate-100 transform transition-all">
+            <div class="flex items-center justify-between pb-3 border-b border-slate-100">
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#FEF3C7] text-[#D97706] text-[10px] font-bold uppercase">
+                    • INFORMASI SEKOLAH
+                </span>
+                <button onclick="closeModal()" class="w-8 h-8 rounded-full bg-slate-100 hover:bg-slate-200 flex items-center justify-center text-slate-600">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+            <h3 id="modal-title" class="font-heading font-bold text-xl text-slate-900 mt-4 mb-2"></h3>
+            <p id="modal-body" class="text-slate-600 text-sm leading-relaxed mb-6"></p>
+            <div class="flex justify-end">
+                <button onclick="closeModal()" class="bg-[#F59E0B] hover:bg-[#D97706] text-white font-semibold text-xs px-6 py-2.5 rounded-full shadow-md transition-colors">
+                    Tutup
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main JavaScript -->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
